@@ -21,15 +21,9 @@ pipeline {
                 }
             }
         }
-        stage('Deploy - Staging') {
+        stage('Deploy') {
             steps {
-                sh './deploy staging'
-                sh './run-smoke-tests'
-            }
-        }
-        stage('Deploy - Production') {
-            steps {
-                sh './deploy production'
+                echo 'Deploying'
             }
         }
     }
